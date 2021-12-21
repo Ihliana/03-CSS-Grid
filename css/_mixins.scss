@@ -1,0 +1,19 @@
+@mixin nav_content {
+    display: flex;
+    grid-column: 2;
+
+}
+
+
+@mixin link_logo {
+    background: #ffe600;
+    padding-top: 2.5em;
+
+}
+
+@mixin nav_list {
+  height: 5em;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}

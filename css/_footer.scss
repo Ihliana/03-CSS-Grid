@@ -1,0 +1,15 @@
+//footer is the same on all pages
+
+footer {
+  background: #ffe600;
+  color: rgba(100,100,100,.6);
+
+
+  p {
+    padding: 2em;
+    grid-column: 2 / -2;
+    text-align: center;
+
+  }
+
+}

@@ -1,0 +1,122 @@
+@import "variables";
+
+//navigation for index
+
+#index {
+      .nav-content {
+        @include nav_content;
+      }
+
+      .link-logo {
+        @include link_logo;
+      }
+
+
+      .nav {
+
+        .nav-list {
+          @include nav_list;
+        }
+
+        a {
+          color: inherit;
+          font-weight: bold;
+          font-size: 1.2rem;
+          cursor: pointer;
+        }
+
+        a:hover,
+        a:focus {
+          color: $primary-color;
+        }
+      }
+}
+
+@media screen and (min-width: 700px) and (max-width: 950px) {
+  #index {
+    .nav {
+      grid-column: 3/5;
+    }
+  }
+}
+
+@media screen and (min-width: 951px){
+  #index {
+    .nav {
+      grid-column: 4;
+    }
+  }
+}
+
+
+// navigation for sun and contact
+
+#sun,
+#contact {
+  header {
+    background: $black;
+  }
+
+  .nav-content {
+    @include nav_content;
+
+    justify-content: space-between;
+  }
+
+  .link-logo {
+    @include link_logo;
+  }
+
+  //showing the button
+  .open-nav {
+    align-self: center;
+    font-size: 2em;
+    background: $primary-color;
+  }
+
+  //hading the navigation
+  .nav {
+    display: none;
+  }
+
+}
+
+
+@media screen and (min-width: 700px) {
+    #sun,
+    #contact {
+
+      .link-logo {
+        padding-top: 5em;
+      }
+
+      //hiding the button
+      .open-nav {
+        display: none;
+      }
+
+      //showing the navigation
+      .nav {
+        display: block;
+        grid-column: 3/-2;
+        justify-self: end;
+
+        .nav-list {
+          display: flex;
+          padding: 2.5em 0;
+          justify-content: flex-end;
+
+
+          a {
+            display: inline-block;
+            margin-right: 1em;
+            font-weight: 700;
+            background: $primary-color;
+            padding: 0.6em 1.2em;
+            border-radius: .5em;
+          }
+        }
+
+      }
+    }
+}

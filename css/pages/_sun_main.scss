@@ -1,0 +1,122 @@
+#sun {
+  .main-grid-sun {
+    display: grid;
+    grid-template-columns: minmax(1em,1fr) repeat(2, minmax(0px, 512px))  minmax(1em, 1fr);
+    grid-column-gap: 2em;
+    grid-template-areas: ". image image ."
+                          ". title title ."
+                          ". date date . "
+                          ". paragraph paragraph ."
+                          ". the_link the_link .";
+  }
+
+  section {
+    margin: 2em 0;
+  }
+
+  .article-date,
+  .article-link,
+  .article-title {
+    justify-self: center;
+  }
+
+
+  .the-sun {
+    height: 100%;
+    object-fit: cover;
+    grid-area: image;
+    border: .8em solid #ffe600;
+  }
+  .article-title {
+    grid-area: title;
+  }
+
+  .article-date {
+    grid-area: date;
+    }
+
+  .article-paragraph {
+    grid-area: paragraph;
+    text-align: center;
+   }
+
+
+  .article-link {
+    grid-area: the_link;
+    text-transform: uppercase;
+    color: $black;
+    font-weight: bold;
+    font-size: .8rem;
+  }
+
+  .info {
+    grid-template-areas: ". heading heading . "
+                         ". descr descr . ";
+
+      .sun-que {
+        grid-area: heading;
+      }
+
+      .sun-ans {
+        grid-area: descr;
+      }
+
+      .sun-que,
+      .sun-ans {
+        justify-self: center;
+        text-align: center;
+      }
+
+    }
+
+}
+
+
+@media screen and (min-width: 820px) {
+  #sun {
+    .main-grid-sun {
+      grid-template-columns:minmax(1em, 1fr) minmax(170px, 250px) minmax(170px, 650px) minmax(1em, 1fr);
+      grid-template-areas: " . image title ."
+                            " . image paragraph ."
+                            ". date the_link .";
+    }
+
+    .article-title{
+      justify-self: start;
+    }
+
+    .article-paragraph {
+      text-align: left;
+    }
+
+  .article-link {
+      justify-self: end;
+    }
+
+  .article-link,
+  .article-date {
+    align-self: baseline;
+  }
+
+  .info {
+    grid-template-areas: ". heading heading . "
+                         ". descr descr . ";
+
+      .sun-que {
+        grid-area: heading;
+      }
+
+      .sun-ans {
+        grid-area: descr;
+      }
+
+      .sun-que,
+      .sun-ans {
+        justify-self: center;
+        text-align: center;
+      }
+
+    }
+
+  }
+}
