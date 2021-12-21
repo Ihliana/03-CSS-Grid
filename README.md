@@ -1,10 +1,11 @@
 # 03-CSS Grid
 
-*grid-template
-*grid-column
-*grid-row
+Used:
+* grid-template
+* grid-column
+* grid-row
+* grid-areas
+* fr
+* minmax()
+* etc.
 
-*grid-areas
-*fr
-*minmax()
-*etc.
